@@ -6,7 +6,9 @@ import {
 } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import { useEffect } from "react";
+import Home from "./pages/Home";
 
+<Route path="/" element={<Home />} />
 import NotFound from "./pages/NotFound";
 
 function AppRoutes() {
