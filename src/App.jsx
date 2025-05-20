@@ -7,8 +7,8 @@ import {
 import { AnimatePresence } from "framer-motion";
 import { useEffect } from "react";
 import Home from "./pages/Home";
+import Header from "./components/Header";
 
-<Route path="/" element={<Home />} />
 import NotFound from "./pages/NotFound";
 
 function AppRoutes() {
@@ -21,6 +21,7 @@ function AppRoutes() {
   return (
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
+        <Route path="/" element={<Home />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </AnimatePresence>
@@ -30,6 +31,7 @@ function AppRoutes() {
 export default function App() {
   return (
     <Router>
+      <Header />
       <main className="min-h-screen">
         <AppRoutes />
       </main>
