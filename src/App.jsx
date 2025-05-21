@@ -7,7 +7,9 @@ import {
 import { AnimatePresence } from "framer-motion";
 import { useEffect } from "react";
 import Home from "./pages/Home";
+
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 import NotFound from "./pages/NotFound";
 
@@ -35,6 +37,7 @@ export default function App() {
       <main className="min-h-screen">
         <AppRoutes />
       </main>
+      <Footer />
     </Router>
   );
 }

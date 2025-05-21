@@ -17,7 +17,7 @@ export default function Home() {
           content="Empowering your business through cloud, AI and cybersecurity solutions."
         />
       </Helmet>
-
+    
       <motion.section
         className="min-h-[80vh] flex flex-col justify-center items-center text-center px-6 pt-12"
         initial={{ opacity: 0, y: 20 }}
