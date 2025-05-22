@@ -7,6 +7,13 @@ import {
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 
+import vercelLogo from "../assets/logos/vercel.png";
+import stripeLogo from "../assets/logos/stripe.png";
+import notionLogo from "../assets/logos/notion.png";
+import linearLogo from "../assets/logos/linear.png";
+import slackLogo from "../assets/logos/slack.png";
+
+
 export default function Home() {
   return (
     <>
@@ -17,7 +24,7 @@ export default function Home() {
           content="Empowering your business through cloud, AI and cybersecurity solutions."
         />
       </Helmet>
-    
+
       <motion.section
         className="min-h-[80vh] flex flex-col justify-center items-center text-center px-6 pt-12"
         initial={{ opacity: 0, y: 20 }}
@@ -85,6 +92,41 @@ export default function Home() {
               End-to-end protection to secure your systems and customer data.
             </p>
           </div>
+        </div>
+      </motion.section>
+
+      <motion.section
+        className="bg-gray-50 py-20 px-6"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+      >
+        <div className="max-w-7xl mx-auto text-center mb-12">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+            Trusted by leading companies
+          </h2>
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            NovaTech powers infrastructure and innovation for teams around the
+            world.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 items-center justify-items-center max-w-6xl mx-auto">
+          {[vercelLogo, stripeLogo, notionLogo, linearLogo, slackLogo].map(
+            (logo, index) => (
+              <div
+                key={index}
+                className="grayscale hover:grayscale-0 transition duration-300 opacity-60 hover:opacity-100"
+              >
+                <img
+                  src={logo}
+                  alt="Client logo"
+                  className="w-[120px] h-[40px] object-contain"
+                />
+              </div>
+            )
+          )}
         </div>
       </motion.section>
     </>
