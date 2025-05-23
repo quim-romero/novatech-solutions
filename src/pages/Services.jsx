@@ -1,28 +1,8 @@
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
+import services from "../data/services";
 
 export default function Services() {
-  const services = [
-    {
-      category: "Cloud Infrastructure",
-      description:
-        "Scalable, secure and cost-efficient cloud solutions using AWS, Azure and more.",
-      color: "from-indigo-500 to-purple-500",
-    },
-    {
-      category: "Artificial Intelligence",
-      description:
-        "Custom AI models and automation workflows to optimize your operations.",
-      color: "from-emerald-500 to-teal-500",
-    },
-    {
-      category: "Cybersecurity",
-      description:
-        "Enterprise-grade protection with audits, encryption, threat detection and more.",
-      color: "from-pink-500 to-rose-500",
-    },
-  ];
-
   return (
     <>
       <Helmet>
