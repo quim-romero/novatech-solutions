@@ -6,7 +6,9 @@ import {
 } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import { useEffect } from "react";
+
 import Home from "./pages/Home";
+import Services from "./pages/Services";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -24,6 +26,8 @@ function AppRoutes() {
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Home />} />
+        <Route path="/services" element={<Services />} />
+        
         <Route path="*" element={<NotFound />} />
       </Routes>
     </AnimatePresence>
